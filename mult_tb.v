@@ -40,13 +40,13 @@ mult mbooth(Producto, clk, start, ValorQ, ValorM, fin);
 initial
 begin
   $monitor("TIEMPO=%0d VALOR_Q=%b VALOR_M=%b START=%b CLK=%b PRODUCTO=%d FIN=%b", $time, valorQ, valorM, start, clk, Producto, fin);      
-  $dumpfile("cuenta1_tb.vcd");
+  $dumpfile("mult_tb.vcd");
   $dumpvars;
 
   //Variables de test
   valorQ = 4'b0011;
   valorM = 4'b0010;
-  #300;
+  #560;
 
   $finish;  //fin simulacion
 

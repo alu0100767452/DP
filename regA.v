@@ -8,7 +8,7 @@ cdaff ff2(CargaA, entA[2], q[3], clk, reset, enable, q[2]);
 cdaff ff3(CargaA, entA[3], q[3], clk, reset, enable, q[3]);
 
 endmodule
-
+/*
 //Biestable con entrada de mux para aceptar dos entradas posibles
 module cdaff (input wire selc_d, inp_c, inp_d, clk, reset, carga, output wire q);
 wire inp;
@@ -25,4 +25,4 @@ not inv1 (s_n, s);
 and and1 (sa, a, s_n);
 and and2 (sb, b, s);
 or or1 (out, sa, sb);
-endmodule
+endmodule*/

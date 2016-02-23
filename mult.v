@@ -6,15 +6,15 @@ wire [7:0] SalAQ;
 wire q0, qm1;
 wire suma, resta;
 
-assign SalAQ = {SalA, SalQ};
+assign SalAQ = SalA + SalQ;
 assign producto = SalAQ;
-assign multiplicador = EntQ;
-assign multiplicando = EntM;
+assign /*multiplicador =*/ EntQ = multiplicador;
+assign /*multiplicando =*/ EntM = multiplicando;
 
-sum4 sum4(EntQ,,, SalA, EntM, 1'b0, suma, resta);
+sum4 sum4(EntA,,, SalA, EntM, 1'b0, suma, resta);
 regA A(EntA, CargaA, DesplazaA, clk, ResetA, SalA);
-regM M(clk, CargaM, multiplicando, SalM);
-regQ Q(multiplicador, CargaQ, DesplazaQ, clk,,, SalQ);
+regM M(clk, ,CargaM, multiplicando, SalM);
+regQ Q(multiplicador, CargaQ, DesplazaQ, clk,,1'b0, SalQ);
 uc UC(clk, start, q0, qm1, CargaQ, CargaA, CargaM, ResetQm1, suma, resta, DesplazaA, DesplazaQ, ResetA, fin);
 
 

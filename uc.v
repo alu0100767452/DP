@@ -45,7 +45,7 @@ always @(*)
         S12: nextstate = S13;
         S13: nextstate = S14;
         S14: nextstate = S14;
-        default: nextstate = S0;
+        //default: nextstate = S0;
     endcase
 
 //Funcion de Salida
